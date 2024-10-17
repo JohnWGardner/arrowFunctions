@@ -31,6 +31,22 @@
     // Return the calculated average.
 
 
+
+// The pseudocode:
+    // Define averagePoints(arr, subject):
+    // Initialize allPoints to 0
+    // Initialize sum to 0
+
+    // For each itm in arr:
+    //     If subject exists in itm.results:
+    //         Add itm.results[subject] to allPoints
+    //         Increment sum by 1
+
+    // Return allPoints / sum
+
+    // Declare averageMarks and assign it the return value of averagePoints(students, 'english')
+    // Log averageMarks
+
 let students = [
     {
         name: 'John',
@@ -67,6 +83,23 @@ const averagePoints = (arr, subject) => {
 let averageMarks = averagePoints(students, 'english');
 console.log(averageMarks);
 
+// The pseudocode:
+    // Function averagePoints(arr, subject):
+    // Initialize totalSum to 0
+    // Initialize totalCount to 0
+
+    // For each student in arr:
+    //     If subject exists in student's results:
+    //         Add student's result for the subject to totalSum
+    //         Increment totalCount by 1
+
+    // If totalCount is greater than 0:
+    //     Return totalSum / totalCount
+    // Else:
+    //     Return 0
+
+
+    
 // const averagePoints = (arr, subject) => {
 //     let totalSum = 0;
 //     let totalCount = 0;
