@@ -1,16 +1,35 @@
-// pseudocode to outline the steps:
+// pseudocode:
 
-// Create a function averagePoints using arrow syntax.
+// Function Definition:
 
-// Initialize a cumulative total and a count for the results.
+    // Define a function averagePoints that takes two parameters: arr and subject.
 
-// Loop through the array of students.
+// Initialize Variables:
 
-// Check if the student's results contain the subject.
+    // Initialize a variable totalSum to 0 (to keep track of the cumulative total of all results for the subject).
 
-// If yes, add the result to the cumulative total and increase the count.
+    // Initialize a variable totalCount to 0 (to keep count of the number of results for the subject).
 
-// Calculate and return the average result for the subject.
+// Loop Through Array:
+
+    // Loop through each element (student) in the array arr.
+
+// Check If Subject Exists:
+
+    // Within the loop, check if the subject exists in the student's results.
+
+// Update Totals:
+
+    // If the subject exists, add the subject's result to totalSum and increment totalCount by 1.
+
+// Calculate Average:
+
+    // After the loop, calculate the average by dividing totalSum by totalCount.
+
+// Return Average:
+
+    // Return the calculated average.
+
 
 let students = [
     {
