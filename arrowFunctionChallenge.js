@@ -68,20 +68,44 @@ let students = [
     }
 ];
 
-const averagePoints = (arr, subject) => {
-    let allPoints = 0;
-    let sum = 0;
-    for(let itm of arr) {
-      if(subject in itm.results) {
-        allPoints += itm.results[subject];
-        sum+=1;
-      }
-    }
-    return allPoints / sum;
-};
 
-let averageMarks = averagePoints(students, 'english');
+const averagePoints = (arr, subject) => { //*
+
+        let sum = 0;
+        let count = 0;
+
+        for (let student of students) {
+            const results = student.results;
+            const result = results[subject]; //this is object reference to the variable subject* as above
+            
+            if (result){ // this is needed as english doesnt exist in all objects and therefore gives a NaN
+                sum = sum + result;
+                count++;
+            }
+        }
+
+        const average = sum /count;
+        return average;
+
+}
+
+let averageMarks = averagePoints(students, "english");
 console.log(averageMarks);
+
+// const averagePoints = (arr, subject) => {
+//     let allPoints = 0;
+//     let sum = 0;
+//     for(let itm of arr) {
+//       if(subject in itm.results) {
+//         allPoints += itm.results[subject];
+//         sum+=1;
+//       }
+//     }
+//     return allPoints / sum;
+// };
+
+// let averageMarks = averagePoints(students, 'english');
+// console.log(averageMarks);
 
 // The pseudocode:
     // Function averagePoints(arr, subject):
